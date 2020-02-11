@@ -4,18 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Happy Travels</title>
+
+
 </head>
 <body>
     <div>
         <h1>Happy Travels</h1>
 
-        <p>Enter a city you are traveling to and a date you will be there.</p>
+        <p>Enter a city and a state you are traveling to and a date you will be there.
+            <br>
+           Currently this application only works for US cities.
+           <br>
+           Check back later for updates.
+        </p>
 
         <form>
-            <div style="margin-top: 50px;">
-              <textarea id="textarea" type ="text" placeholder="City" ></textarea>
-              <textarea id="datearea" type = "date" placeholder="Date" ></textarea>
+            <div style="margin-top: 20px;">
+              <label for="city">City: </label><input type ="text" id="city" name="city"></input>
+              <label for="state">State: </label><input type ="text" id="state" name="state"></input>
+              <br>
+              <br>
+              <label for="date">Date: </label><input type ="date" id="date" name="date"></input>
               <div>
+                  <br>
                 <button id="clear">Clear</button>
               </div>
             </div>
@@ -26,5 +37,6 @@
         </form>
 
     </div>
+    <script src="./assets/script.js"></script>
 </body>
 </html>
