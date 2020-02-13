@@ -20,7 +20,6 @@ $.ajax({
             $(".city").html("<h1>" + response.name + " Weather Details</h1>");
             $(".wind").text("Wind Speed: " + response.wind.speed);
             $(".humidity").text("Humidity: " + response.main.humidity);
-            $(".temp").text("Temperature (F) " + response.main.temp);
         
             // Converts Kelvin temperature to Fahrenheit
             let fahrenheit = ((response.main.temp - 273.15) * 1.8 + 32).toFixed(2);
