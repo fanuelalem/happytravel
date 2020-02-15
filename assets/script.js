@@ -4,6 +4,13 @@ $("#submit").on("click", function(event){
     let myStateInput = $("#state").val();
     let myDateInput = $("#date").val();
 
+
+    if (myCityInput === '' || myStateInput === ''){
+        $('.ui.modal').modal('show');
+    } else {
+
+
+
     if (!myDateInput){
         (myDateInput = (moment().format('YYYY-MM-DD')));
     };
@@ -20,21 +27,23 @@ $("#submit").on("click", function(event){
     // console.log(TMqueryURL);
 
 $.ajax({
+
         url: queryURL,
         method: "GET"
     })
     
     .then(function(response){
-            // console.log(response);
+
         
-            $(".city").html("<h1>" + response.name + " Weather Details</h1>");
-            $(".wind").text("Wind Speed: " + response.wind.speed);
-            $(".humidity").text("Humidity: " + response.main.humidity);
+        $(".city").html("<h1>" + response.name + " Weather Details</h1>");
+        $(".wind").text("Wind Speed: " + response.wind.speed);
+        $(".humidity").text("Humidity: " + response.main.humidity);
         
-            // Converts Kelvin temperature to Fahrenheit
-            let fahrenheit = ((response.main.temp - 273.15) * 1.8 + 32).toFixed(2);
-            $(".temp").text("Temperature (Fahrenheit) " + fahrenheit);
+        // Converts Kelvin temperature to Fahrenheit
+        let fahrenheit = ((response.main.temp - 273.15) * 1.8 + 32).toFixed(2);
+        $(".temp").text("Temperature (Fahrenheit) " + fahrenheit);
         
+
         });
 $.ajax({
          url: TMqueryURL,
@@ -61,4 +70,21 @@ $.ajax({
 
         
     });
-            
+    $.ajax({
+        url: TMqueryURL,
+        method: "GET"
+    })
+    
+    .then(function(TMresponse){
+        console.log(TMresponse);
+        
+        eventIndex = 0;
+        imageIndex = 0;
+        console.log(TMresponse._embedded.events[eventIndex].eventIndex.images[imageIndex].imageIndex.url);
+        $("#Events").attr("src", TMresponse._embedded.events[eventsIndex].eventsIndex.images[imageIndex].imageIndex.url)
+        
+    });
+    
+}
+    
+});
