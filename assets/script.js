@@ -44,13 +44,15 @@ $.ajax({
         .then(function(TMresponse){
                 console.log(TMresponse);
                
-            eventIndex = 0;
-            imageIndex = 0;
+            var eventIndex = 0;
+            var imageIndex = 0;
+            var eventimage = $("<img>");
 
-            // console.log(TMresponse._embedded.events[eventIndex].eventIndex.images[imageIndex].imageIndex.url);
+            console.log(TMresponse._embedded.events[eventIndex].images[imageIndex].url);
 
-            // $("#Events").attr("src", TMresponse._embedded.events[eventsIndex].eventsIndex.images[imageIndex].imageIndex.url)
+            eventimage.attr("src", TMresponse._embedded.events[eventIndex].images[imageIndex].url);
 
+            $("#Events").prepend(eventimage);
             
             });
 
