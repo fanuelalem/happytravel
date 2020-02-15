@@ -50,13 +50,20 @@ $.ajax({
                
             var eventIndex = 0;
             var imageIndex = 0;
-            var eventimage = $("<img>");
+            var eventLink = $("<a>");
+            var eventImage = $("<img>");
+            var eventText = $("<p>");
+          
 
             console.log(TMresponse._embedded.events[eventIndex].images[imageIndex].url);
 
-            eventimage.attr("src", TMresponse._embedded.events[eventIndex].images[imageIndex].url);
+            eventImage.attr("src", TMresponse._embedded.events[eventIndex].images[imageIndex].url);
+            eventLink.attr("href", TMresponse._embedded.events[eventIndex].url);
+            eventText = (TMresponse._embedded.events[eventIndex].name);
+            eventLink.html(eventImage);
 
-            $("#Events").prepend(eventimage);
+            $("#Events").append(eventText);
+            $("#Events").append(eventLink);
             
             });
 
