@@ -1,3 +1,5 @@
+
+
 $("#submit").on("click", function(event){
     event.preventDefault();
     let myCityInput = $("#city").val();
@@ -12,16 +14,12 @@ $("#submit").on("click", function(event){
         (myDateInput = (moment().format('YYYY-MM-DD')));
     };
 
-
-    // console.log(myCityInput);
-    // console.log(myStateInput);
-    console.log(myDateInput);
+    // This clears the event Div when someone makes a new query
+    $( "#Events").empty();
 
     const queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + myCityInput + "," + myStateInput + ",US&appid=ff175c5d4fbe21dbdd37b7f1c9b145c0"
     const TMqueryURL = "https://app.ticketmaster.com/discovery/v2/events.json?city=" + myCityInput + "&state=" + myStateInput + "&StartDateTime=" + myDateInput + "T17:10:00Z&apikey=YMlYHHHVYwygEGBTQoXW1SB8KfJBSYPH"
 
-    // console.log(queryURL);
-    // console.log(TMqueryURL);
 
 $.ajax({
 
