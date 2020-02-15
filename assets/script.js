@@ -3,13 +3,10 @@ $("#submit").on("click", function(event){
     let myCityInput = $("#city").val();
     let myStateInput = $("#state").val();
     let myDateInput = $("#date").val();
-
-
+    
     if (myCityInput === '' || myStateInput === ''){
         $('.ui.modal').modal('show');
     } else {
-
-
 
     if (!myDateInput){
         (myDateInput = (moment().format('YYYY-MM-DD')));
@@ -65,26 +62,5 @@ $.ajax({
             
             });
 
-
-        
-
-        
+        }
     });
-    $.ajax({
-        url: TMqueryURL,
-        method: "GET"
-    })
-    
-    .then(function(TMresponse){
-        console.log(TMresponse);
-        
-        eventIndex = 0;
-        imageIndex = 0;
-        console.log(TMresponse._embedded.events[eventIndex].eventIndex.images[imageIndex].imageIndex.url);
-        $("#Events").attr("src", TMresponse._embedded.events[eventsIndex].eventsIndex.images[imageIndex].imageIndex.url)
-        
-    });
-    
-}
-    
-});
