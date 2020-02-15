@@ -2,20 +2,30 @@ $("#submit").on("click", function(event){
     event.preventDefault();
     let myCityInput = $("#city").val();
     let myStateInput = $("#state").val();
-    console.log(myCityInput);
-    console.log(myStateInput);
-    
+    let myDateInput = $("#date").val();
+
+    if (!myDateInput){
+        (myDateInput = (moment().format('YYYY-MM-DD')));
+    };
+
+
+    // console.log(myCityInput);
+    // console.log(myStateInput);
+    console.log(myDateInput);
+
     const queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + myCityInput + "," + myStateInput + ",US&appid=ff175c5d4fbe21dbdd37b7f1c9b145c0"
-    
-    console.log(queryURL);
-    
+    const TMqueryURL = "https://app.ticketmaster.com/discovery/v2/events.json?city=" + myCityInput + "&state=" + myStateInput + "&StartDateTime=" + myDateInput + "T17:10:00Z&apikey=YMlYHHHVYwygEGBTQoXW1SB8KfJBSYPH"
+
+    // console.log(queryURL);
+    // console.log(TMqueryURL);
+
 $.ajax({
         url: queryURL,
         method: "GET"
     })
     
     .then(function(response){
-            console.log(response);
+            // console.log(response);
         
             $(".city").html("<h1>" + response.name + " Weather Details</h1>");
             $(".wind").text("Wind Speed: " + response.wind.speed);
@@ -26,5 +36,27 @@ $.ajax({
             $(".temp").text("Temperature (Fahrenheit) " + fahrenheit);
         
         });
+$.ajax({
+         url: TMqueryURL,
+         method: "GET"
+        })
+        
+        .then(function(TMresponse){
+                console.log(TMresponse);
+               
+            eventIndex = 0;
+            imageIndex = 0;
+
+            // console.log(TMresponse._embedded.events[eventIndex].eventIndex.images[imageIndex].imageIndex.url);
+
+            // $("#Events").attr("src", TMresponse._embedded.events[eventsIndex].eventsIndex.images[imageIndex].imageIndex.url)
+
+            
+            });
+
+
+        
+
+        
     });
             
