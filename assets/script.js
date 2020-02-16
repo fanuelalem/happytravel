@@ -29,7 +29,6 @@ $.ajax({
     
     .then(function(response){
 
-        
         $(".city").html("<h1>" + response.name + " Weather Details</h1>");
         $(".wind").text("Wind Speed: " + response.wind.speed);
         $(".humidity").text("Humidity: " + response.main.humidity);
@@ -38,33 +37,42 @@ $.ajax({
         let fahrenheit = ((response.main.temp - 273.15) * 1.8 + 32).toFixed(2);
         $(".temp").text("Temperature (Fahrenheit) " + fahrenheit);
         
-
         });
+
+        var eventHeading = $("<h2>");
+
+        eventHeading = ("Events happening in " + myCityInput);
+        $("#Events").append(eventHeading);
+        $("#Events").append("<br>");
+
 $.ajax({
          url: TMqueryURL,
          method: "GET"
         })
-        
+    
         .then(function(TMresponse){
-                console.log(TMresponse);
-               
-            var eventIndex = 0;
-            var imageIndex = 0;
-            var eventLink = $("<a>");
-            var eventImage = $("<img>");
-            var eventText = $("<p>");
-          
 
-            console.log(TMresponse._embedded.events[eventIndex].images[imageIndex].url);
+            // loop through the TMresponse object and pull the first 5 events
+            for (eventIndex = 0; eventIndex < 5; eventIndex++){
+
+                var imageIndex = 0;
+                var eventLink = $("<a>");
+                var eventImage = $("<img>");
+                var eventName = $("<p>");
+                var eventDate = $("<p>");
 
             eventImage.attr("src", TMresponse._embedded.events[eventIndex].images[imageIndex].url);
             eventLink.attr("href", TMresponse._embedded.events[eventIndex].url);
-            eventText = (TMresponse._embedded.events[eventIndex].name);
+            eventName = (TMresponse._embedded.events[eventIndex].name);
+            eventDate = (TMresponse._embedded.events[eventIndex].dates.start.localDate);
+
             eventLink.html(eventImage);
 
-            $("#Events").append(eventText);
+            $("#Events").append("Event: " + eventName + "<br>");
+            $("#Events").append("Event Date: " + eventDate + "<br>");
             $("#Events").append(eventLink);
-            
+            $("#Events").append("<br>");
+            }
             });
 
         }
