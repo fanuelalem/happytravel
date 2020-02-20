@@ -4,7 +4,12 @@ body {
   background-size: 100%;
   background-attachment: fixed;
 }
-
+#happy-travels{font-size:40px}
+#paragraph{font-size:20px}
+#text1{font-size:20px}
+#text2{font-size:20px}
+#text3{font-size:20px}
+  
 .weather {
   background-color: rgba(255, 255, 255, 0.6);
   /* opacity: 0.5; */
@@ -16,4 +21,7 @@ body {
     background-image: none;
     background-color: #65beef;
   }
+  #text1{font-size:20px}
+#text2{font-size:20px}
+#text3{font-size:20px}
 }
