@@ -23,8 +23,9 @@
       <br>
       Check back later for updates.
     </p>
+  </div>
 
-    <form>
+    <form class="ui text container">
       <div style="margin-top: 20px;">
         <!-- User enters city and state -->
         <label for="city">City: </label><input type="text" id="city" name="city">
@@ -40,27 +41,28 @@
         </div>
       </div>
       <br>
-
     </form>
-    <br>
-    <div class="weather">
 
+    <br>
+    <div class="weather ui one column stackable center aligned grid">
       <div class="city"></div>
       <div class="wind"></div>
       <div class="humidity"></div>
       <div class="temp"></div>
-
     </div>
-    <div id="restaurant" class="weather">
-    </div>
-    <div id="Events">
 
+    <div class="ui two column stackable center aligned grid">
+      <div class="row">
+        <div class="column">
+          <div id="restaurant" class="weather">
+          </div>
+        </div>
+        <div class="column">
+          <div id="Events" class="weather">
+          </div>
+        </div>
+      </div>
     </div>
-    <div id="currencyexchange">
-
-    </div>
-  </div>
-
 
   <!-- modal to display when city or state fields are left blank -->
   <div class="ui modal">

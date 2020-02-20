@@ -121,7 +121,7 @@ $("#submit").on("click", function (event) {
                             restaurantLocality = (zomatoResponse2.restaurants[restaurantIndex].restaurant.location.locality);
 
                             $("#restaurant").append(restaurantImage);
-                            $("#restaurant").append("Name: " + restaurantName + "<br>");
+                            $("#restaurant").append("<br>" + "Name: " + restaurantName + "<br>");
                             $("#restaurant").append("Cuisines: " + restaurantCuisines + "<br>");
                             $("#restaurant").append("Address: " + restaurantAddress + "<br>");
                             $("#restaurant").append("Locality: " + restaurantLocality + "<br>");
