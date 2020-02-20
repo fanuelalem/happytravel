@@ -32,17 +32,17 @@ $("#submit").on("click", function (event) {
 
             .then(function (response) {
 
-                $(".city").html("<h1>" + response.name + " Weather Details</h1>");
-                $(".wind").text("Wind Speed: " + response.wind.speed);
-                $(".humidity").text("Humidity: " + response.main.humidity);
+                $(".city").html("<h3>" + response.name + " Weather Details:</h3>");
+                $(".wind").html("<h3> Wind Speed: " + response.wind.speed + "</h3>");
+                $(".humidity").html("<h3> Humidity: " + response.main.humidity + "</h3>");
 
                 // Converts Kelvin temperature to Fahrenheit
                 let fahrenheit = ((response.main.temp - 273.15) * 1.8 + 32).toFixed(2);
-                $(".temp").text("Temperature (Fahrenheit) " + fahrenheit);
+                $(".temp").html("<h3> Temperature (Fahrenheit): " + fahrenheit + "</h3>");
 
             });
 
-        var eventHeading = $("<h2>");
+        let eventHeading = $("<h2>");
 
         eventHeading = ("Events happening in " + myCityInput + "<br>");
         $("#Events").append(eventHeading);
@@ -54,16 +54,15 @@ $("#submit").on("click", function (event) {
         })
 
             .then(function (TMresponse) {
-                console.log(TMresponse);
                 // loop through the TMresponse object and pull the first 5 events
-                for (eventIndex = 0; eventIndex < 5; eventIndex++) {
+                for (let eventIndex = 0; eventIndex < 5; eventIndex++) {
 
-                    var imageIndex = 0;
-                    var eventLink = $("<a>");
-                    var eventImage = $("<img>");
-                    var eventName = $("<p>");
-                    var eventDate = $("<p>");
-                    var eventVenue = $("<p>");
+                    let imageIndex = 0;
+                    let eventLink = $("<a>");
+                    let eventImage = $("<img>");
+                    let eventName = $("<p>");
+                    let eventDate = $("<p>");
+                    let eventVenue = $("<p>");
 
                     eventImage.attr("src", TMresponse._embedded.events[eventIndex].images[imageIndex].url);
                     eventImage.height(200);
@@ -97,8 +96,6 @@ $("#submit").on("click", function (event) {
         })
 
             .then(function (zomatoResponse) {
-                console.log(zomatoResponse);
-                console.log(zomatoResponse.location_suggestions[0].id);
                 const entity_id = zomatoResponse.location_suggestions[0].id;
                 const ZomatoURL2 = "https://developers.zomato.com/api/v2.1/search?entity_type=city&collection_id=1&entity_id=" + entity_id;
                 $.ajax({
@@ -106,9 +103,9 @@ $("#submit").on("click", function (event) {
                     method: "GET",
                     headers: { "user-key": "ebb5a0bfcc2b64b4d6e35e9a5c767e6b" }
                 })
-        
+
                     .then(function (zomatoResponse2) {
-                        
+
                         // loop through the zomatoResponse2 object and pull the first 5 restaurants
                         for (let restaurantIndex = 0; restaurantIndex < 5; restaurantIndex++) {
 
@@ -124,7 +121,7 @@ $("#submit").on("click", function (event) {
                             restaurantAddress = (zomatoResponse2.restaurants[restaurantIndex].restaurant.location.address)
                             restaurantLocality = (zomatoResponse2.restaurants[restaurantIndex].restaurant.location.locality);
 
-                           
+
                             $("#restaurant").append("<br>" + "Name: " + restaurantName + "<br>");
                             $("#restaurant").append("Cuisines: " + restaurantCuisines + "<br>");
                             $("#restaurant").append("Address: " + restaurantAddress + "<br>");
