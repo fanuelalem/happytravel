@@ -17,6 +17,9 @@ $("#submit").on("click", function (event) {
         // This clears the event Div when someone makes a new query
         $("#Events").empty();
 
+        // This clears the restaruant Div when somoene makes a new query
+        $("#restaurant").empty();
+
         const queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + myCityInput + "," + myStateInput + ",US&appid=ff175c5d4fbe21dbdd37b7f1c9b145c0"
         const TMqueryURL = "https://app.ticketmaster.com/discovery/v2/events.json?city=" + myCityInput + "&stateCode=" + myStateInput + "&countryCode=US&StartDateTime=" + myDateInput + "T01:10:00Z&apikey=YMlYHHHVYwygEGBTQoXW1SB8KfJBSYPH"
         const ZomatoURL = "https://developers.zomato.com/api/v2.1/cities?q=" + myCityInput;
