@@ -44,7 +44,7 @@ $("#submit").on("click", function (event) {
 
         var eventHeading = $("<h2>");
 
-        eventHeading = ("Events happening in " + myCityInput);
+        eventHeading = ("Events happening in " + myCityInput + "<br>");
         $("#Events").append(eventHeading);
         $("#Events").append("<br>");
 
@@ -66,6 +66,7 @@ $("#submit").on("click", function (event) {
                     var eventVenue = $("<p>");
 
                     eventImage.attr("src", TMresponse._embedded.events[eventIndex].images[imageIndex].url);
+                    eventImage.height(200);
                     eventLink.attr("href", TMresponse._embedded.events[eventIndex].url);
                     eventLink.attr("target", '_blank');
                     eventLink.html(eventImage);
@@ -78,7 +79,7 @@ $("#submit").on("click", function (event) {
                     $("#Events").append("Event Date: " + eventDate + "<br>");
                     $("#Events").append("Event Venue: " + eventVenue + "<br>");
                     $("#Events").append(eventLink);
-                    $("#Events").append("<br>");
+                    $("#Events").append("<br>" + "<br>");
                 }
 
             });
@@ -123,11 +124,12 @@ $("#submit").on("click", function (event) {
                             restaurantAddress = (zomatoResponse2.restaurants[restaurantIndex].restaurant.location.address)
                             restaurantLocality = (zomatoResponse2.restaurants[restaurantIndex].restaurant.location.locality);
 
-                            $("#restaurant").append(restaurantImage);
+                           
                             $("#restaurant").append("<br>" + "Name: " + restaurantName + "<br>");
                             $("#restaurant").append("Cuisines: " + restaurantCuisines + "<br>");
                             $("#restaurant").append("Address: " + restaurantAddress + "<br>");
                             $("#restaurant").append("Locality: " + restaurantLocality + "<br>");
+                            $("#restaurant").append(restaurantImage);
                             $("#restaurant").append("<br>");
                         }
 
