@@ -17,54 +17,54 @@
     <br>
     <h1 id="happy-travels" class="ui dividing header">Happy Travels</h1>
 
-    <p id="paragraph">Enter a city and a state you are traveling to and a date you will be there.
+    <p id="paragraph">Enter a city and a state you are traveling to and the date you will be there.
+      <br>
+      Then see the current weather along with a list of restaurants and events.
       <br>
       Currently this application only works for US cities.
-      <br>
-      Check back later for updates.
     </p>
   </div>
 
-    <form class="ui text container">
-      <div style="margin-top: 20px;">
-        <!-- User enters city and state -->
+  <form class="ui text container">
+    <div style="margin-top: 20px;">
+      <!-- User enters city and state -->
 
-        <label id="text1" for="city">City: </label><input type="text" id="city" name="city">
-        <label id="text2"for="state">State (2 letter abbreviation): </label><input type="text" id="state" name="state">
+      <label id="text1" for="city">City: </label><input type="text" id="city" name="city">
+      <label id="text2" for="state">State (2 letter abbreviation): </label><input type="text" id="state" name="state">
 
-        <br>
-        <br>
-        <!-- User enters date to start trip -->
-        <label id="text3"for="date">Date: </label><input type="date" id="date" name="date"></input>
-        <div>
-          <br>
-          <button id="submit" class="ui primary button">SUBMIT</button>
-          <button id="clear" class="ui secondary button right floated">Clear</button>
-        </div>
-      </div>
       <br>
-    </form>
-
-    <br>
-    <div class="weather ui one column stackable center aligned grid">
-      <div class="city"></div>
-      <div class="wind"></div>
-      <div class="humidity"></div>
-      <div class="temp"></div>
+      <br>
+      <!-- User enters date to start trip -->
+      <label id="text3" for="date">Date (Optional): </label><input type="date" id="date" name="date"></input>
+      <div>
+        <br>
+        <button id="submit" class="ui primary button">SUBMIT</button>
+        <button id="clear" class="ui secondary button right floated">Clear</button>
+      </div>
     </div>
+    <br>
+  </form>
 
-    <div class="ui two column stackable center aligned grid">
-      <div class="row">
-        <div class="column">
-          <div id="restaurant" class="weather">
-          </div>
+  <br>
+  <div class="weather ui one column stackable center aligned grid">
+    <div class="city ui one column stackable center aligned grid"></div>
+    <div class="wind ui one column stackable center aligned grid"></div>
+    <div class="humidity ui one column stackable center aligned grid"></div>
+    <div class="temp ui one column stackable center aligned grid"></div>
+  </div>
+
+  <div class="ui two column stackable center aligned grid">
+    <div class="row">
+      <div class="column">
+        <div id="restaurant" class="weather">
         </div>
-        <div class="column">
-          <div id="Events" class="weather">
-          </div>
+      </div>
+      <div class="column">
+        <div id="Events" class="weather">
         </div>
       </div>
     </div>
+  </div>
 
   <!-- modal to display when city or state fields are left blank -->
   <div class="ui modal">
