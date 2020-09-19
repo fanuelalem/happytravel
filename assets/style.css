@@ -1,5 +1,6 @@
 body {
-  background-image: url('./maxresdefault.jpg');
+  /* background-image: url('./maxresdefault.jpg'); */
+  background-image:url(pexels-elena-zhuravleva-1457812.jpg);
   background-repeat: no-repeat;
   background-size: 100%;
   background-attachment: fixed;
@@ -7,7 +8,7 @@ body {
 }
 
 #happy-travels{font-size:40px;font-family: 'Overpass', sans-serif;}
-.para{background-color:rgba(255,255,255,.2);box-shadow: 0 5px 15px rgba(0,0,0,.5) ;border-radius:7px; padding:10px;opacity:.7}
+.para{background-color:#A1CCA5;box-shadow: 0 5px 15px rgba(0,0,0,.5) ;border-radius:7px; padding:10px;}
 
 #paragraph{color:black;font-size:20px; font-family: 'Playfair Display', serif;}
 #text1{font-size:20px}
