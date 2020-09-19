@@ -32,7 +32,7 @@ $("#submit").on("click", function (event) {
 
             .then(function (response) {
 
-                $(".city").html("<h3>" + response.name + " Weather Details:</h3>");
+                $(".city").html("<h3>" + response.name + " Weather Details </h3>");
                 $(".wind").html("<h3> Wind Speed: " + response.wind.speed + "</h3>");
                 $(".humidity").html("<h3> Humidity: " + response.main.humidity + "</h3>");
 

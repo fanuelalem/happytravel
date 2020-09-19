@@ -14,7 +14,8 @@ body {
 #text2{font-size:20px}
 #text3{font-size:20px}
 #city{margin-right:35px}
-
+.info{ margin-bottom:45px; margin-top:10px }
+.back{ margin-top:200px}
   
 .weather {
   background-color: rgba(255, 255, 255, 0.0);
