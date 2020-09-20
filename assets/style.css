@@ -8,7 +8,7 @@ body {
 }
 
 #happy-travels{font-size:40px;font-family: 'Overpass', sans-serif;text-align: center;}
-.para{background-color:#A1CCA5;box-shadow: 0 5px 15px rgba(0,0,0,.5) ;border-radius:7px; padding:10px;}
+.para{  background-color:#9fccc5;box-shadow: 0 5px 15px rgba(0,0,0,.5) ;border-radius:7px; padding:10px;}
 
 #paragraph{color:black;font-size:20px; font-family: 'Playfair Display', serif;}
 #text1{font-size:20px}
@@ -29,7 +29,25 @@ body {
     background-color: #65beef;
   }
 }
+#clear{
+  background-color:#606865;
+  color:black
+}
 
 #happy-travels {
-  color: #F5CCE8;
+  color:#606865;
+  background-color:#e4b9ba
 }
+#submit{
+  background-color:#9fccc5;
+  color:black
+}
+/* #submit{
+  color:#fbfcfd;
+  padding:10px 25px;
+  background:transparent;
+  border: 1px solid #fff;
+  border-radius:20px;
+  outline:none;
+  cursor:pointer
+} */
