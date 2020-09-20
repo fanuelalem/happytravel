@@ -35,6 +35,7 @@ body {
 }
 
 #happy-travels {
+  box-shadow: 0 5px 15px rgba(0,0,0,.5) ;border-radius:7px;
   color:#606865;
   background-color:#e4b9ba
 }
