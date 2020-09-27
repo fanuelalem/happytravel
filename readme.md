@@ -14,7 +14,7 @@ our motivation when building this application was to encourage more people to co
 very easy to use, just type in your city and state and see your results!
 
  
-## Built With
+## Technologies
 
 * [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
 * [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
