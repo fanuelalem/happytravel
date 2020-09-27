@@ -11,7 +11,7 @@ our motivation when building this application was to encourage more people to co
 
 ## Getting Started
 
-very easy to use, just type in your location and see your results!
+very easy to use, just type in your city and state and see your results!
 
  
 ## Built With
