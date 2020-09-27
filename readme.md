@@ -19,6 +19,9 @@ very easy to use, just type in your city and state and see your results!
 * [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
 * [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
 * [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+* [Semantics-UI](https://semantic-ui.com/)
+* [Jquery](https://developer.mozilla.org/en-US/docs/Glossary/jQuery)
+
 
 ## Deployed Link
 
