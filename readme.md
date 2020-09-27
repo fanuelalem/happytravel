@@ -22,7 +22,7 @@ very easy to use, just type in your location and see your results!
 
 ## Deployed Link
 
-* [See Live Site](https://erikvschultz.github.io/happytravel/index.html)
+* [See Live Site](https://fanuelalem.github.io/happytravel/)
 
 
 ## Authors
