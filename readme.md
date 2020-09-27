@@ -8,7 +8,12 @@ Happy Travel, an application that gives user information on local restaurants, e
 
 very easy to use, just type in your location and see your results!
 
- 
+## Motivation
+
+our motivation when building this application was to encourage more people to consider traveling with out any fear or doubts of having a fulfilling trip. Our group was focused on giving users a reliable and simple way to lookup local information in the fastest and most efficient way possible.  
+
+
+
 ## Built With
 
 * [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
