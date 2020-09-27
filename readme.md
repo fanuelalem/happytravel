@@ -2,12 +2,12 @@
 
 Happy Travel, an application that gives user information on local restaurants, events, and weather based on location!
 
+![Project Image](happytrav.png)
 
 ## Getting Started
 
 very easy to use, just type in your location and see your results!
 
- 
  
 ## Built With
 
