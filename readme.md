@@ -1,4 +1,4 @@
-# project Title
+# Happy Travel
 
 Happy Travel, an application that gives user information on local restaurants, events, and weather based on location!
 
