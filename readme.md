@@ -6,12 +6,12 @@ A simple search application that gives user information on local restaurants, ev
 
 ## Motivation
 
-our motivation when building this application was to encourage more people to consider traveling with out any fear or doubts of having a fulfilling trip. Our group was focused on giving users a reliable and simple way to lookup local information in the fastest and most efficient way possible.  
+Our motivation when building this application was to encourage more people to consider traveling with out any fear or doubts of having a fulfilling trip. Our group was focused on giving users a reliable and simple way to lookup local information in the fastest and most efficient way possible.  
 
 
 ## Getting Started
 
-very easy to use, just type in your city and state and see your results!
+Very easy to use, just type in your city and state and see your results!
 
  
 ## Technologies
