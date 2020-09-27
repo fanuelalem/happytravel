@@ -38,7 +38,7 @@ Erik Schultz
 
  
 
-See also the list of [contributors]( https://github.com/erikvschultz/happytravel/graphs/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/fanuelalem/happytravel/graphs/contributors) who participated in this project.
 
 ## License
 
