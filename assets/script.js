@@ -57,9 +57,9 @@ $("#submit").on("click", function (event) {
 
 
 
-        let eventHeading = $("<h2>");
+        let eventHeading = $('<h3>');
 
-        eventHeading = (`<h3> Events happening in ${myCityInput} <h3> <br>`);
+        eventHeading = (`<h3>Events happening in ${myCityInput} </h3> <br>`);
         $("#Events").append(eventHeading);
         $("#Events").append("<br>");
         $('#Events').css('background-color','yellow')
