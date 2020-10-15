@@ -8,12 +8,18 @@ $("#submit").on("click", function (event) {
 
     if (myCityInput === '' || myStateInput === '') {
         $('.ui.modal').modal('show');
+        
     } else {
 
         if (!myDateInput) {
             (myDateInput = (moment().format('YYYY-MM-DD')));
+            
         };
 
+        $('#Events').css('background-color','yellow')
+
+            
+      
         // This clears the event Div when someone makes a new query
         $("#Events").empty();
 
@@ -31,7 +37,8 @@ $("#submit").on("click", function (event) {
         })
 
             .then(function (response) {
-
+              
+ 
                 $(".city").html("<h3>" + response.name + " Weather Details </h3>");
                 $(".wind").html("<h3> Wind Speed: " + response.wind.speed + "</h3>");
                 $(".humidity").html("<h3> Humidity: " + response.main.humidity + "</h3>");
@@ -40,13 +47,27 @@ $("#submit").on("click", function (event) {
                 let fahrenheit = ((response.main.temp - 273.15) * 1.8 + 32).toFixed(2);
                 $(".temp").html("<h3> Temperature (Fahrenheit): " + fahrenheit + "</h3>");
 
+                
+
             });
+
+            $('#info').css('background-color','yellow')
+            $('#info').css('margin-right','25px')
+            $('#info').css('margin-left','25px')
+
+
 
         let eventHeading = $("<h2>");
 
         eventHeading = ("Events happening in " + myCityInput + "<br>");
         $("#Events").append(eventHeading);
         $("#Events").append("<br>");
+        $('#Events').css('background-color','yellow')
+        $('#Events').css('height','100%')
+        $('#Events').css('margin-right','25px')
+
+        
+
 
         $.ajax({
             url: TMqueryURL,
@@ -84,9 +105,14 @@ $("#submit").on("click", function (event) {
             });
 
         let restaurantHeading = $("<p>");
-        restaurantHeading = ("Happening restaurants in " + myCityInput);
+        restaurantHeading = (`<h3> Happening restaurants in ${myCityInput} <h3>`);
         $("#restaurant").append(restaurantHeading);
         $("#restaurant").append("<br>");
+        $('#restaurant').css('background-color','yellow')
+        $('#restaurant').css('height','100%')
+        $('#restaurant').css('margin-left','25px')
+
+
 
         // Zomato AJAX calls, first one to determine entity_id of city, second one to find popular restaurants given that entity_id
         $.ajax({
@@ -114,7 +140,7 @@ $("#submit").on("click", function (event) {
                             let restaurantCuisines = $("<div>");
                             let restaurantAddress = $("<div>");
                             let restaurantLocality = $("<div>");
-
+ 
                             restaurantImage.attr("src", zomatoResponse2.restaurants[restaurantIndex].restaurant.thumb);
                             restaurantName = (zomatoResponse2.restaurants[restaurantIndex].restaurant.name);
                             restaurantCuisines = (zomatoResponse2.restaurants[restaurantIndex].restaurant.cuisines);
@@ -128,7 +154,11 @@ $("#submit").on("click", function (event) {
                             $("#restaurant").append("Locality: " + restaurantLocality + "<br>");
                             $("#restaurant").append(restaurantImage);
                             $("#restaurant").append("<br>");
+
+                            console.log(zomatoResponse2)
                         }
+
+                        
 
                     });
             });
